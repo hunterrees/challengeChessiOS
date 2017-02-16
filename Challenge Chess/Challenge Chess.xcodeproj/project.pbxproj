@@ -17,6 +17,7 @@
 		2174FB161E4E8F4D00F20E17 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2174FB131E4E8F4D00F20E17 /* FBSDKLoginKit.framework */; };
 		2174FB171E4E8F4D00F20E17 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2174FB141E4E8F4D00F20E17 /* FBSDKShareKit.framework */; };
 		2174FB191E4E8F9A00F20E17 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2174FB181E4E8F9A00F20E17 /* Bolts.framework */; };
+		21B213961E5520C60052312E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B213951E5520C60052312E /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2174FB131E4E8F4D00F20E17 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		2174FB141E4E8F4D00F20E17 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2174FB181E4E8F9A00F20E17 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		21B213951E5520C60052312E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				215B4C4B1E4E8C7E0063BAC6 /* AppDelegate.swift */,
 				215B4C4D1E4E8C7E0063BAC6 /* ViewController.swift */,
 				215B4C4F1E4E8C7E0063BAC6 /* Main.storyboard */,
+				21B213951E5520C60052312E /* MenuViewController.swift */,
 				215B4C551E4E8C7E0063BAC6 /* Assets.xcassets */,
 				215B4C571E4E8C7E0063BAC6 /* LaunchScreen.storyboard */,
 				215B4C5A1E4E8C7E0063BAC6 /* Info.plist */,
@@ -166,6 +169,7 @@
 				215B4C4E1E4E8C7E0063BAC6 /* ViewController.swift in Sources */,
 				215B4C541E4E8C7E0063BAC6 /* Challenge_Chess.xcdatamodeld in Sources */,
 				215B4C4C1E4E8C7E0063BAC6 /* AppDelegate.swift in Sources */,
+				21B213961E5520C60052312E /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var fbLoginButton: UIButton!
     
     @IBAction func loginButtonClicked(_ sender: AnyObject) {
         
@@ -36,16 +35,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if (FBSDKAccessToken.current() != nil)
         {
-            // User is already logged in, do work such as go to next view controller.
+            self.performSegue(withIdentifier: "redirectAfterFacebookLogin", sender: self)
+            print("User Logged In")
+            
         }
         else
         {
             let fbLoginButton : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(fbLoginButton)
+            
             fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 150)
+            
             fbLoginButton.readPermissions = ["public_profile", "email"]
+            
             fbLoginButton.delegate = self
-
+            
+            self.view.addSubview(fbLoginButton)
         }
         
     }
@@ -58,20 +62,25 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     // Facebook Delegate Methods
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        print("User Logged In")
+        
         
         if error != nil
         {
+           print("Error logging in through Facebook")
             // Process error
         }
         else if result.isCancelled {
             // Handle cancellations
         }
         else {
+            
+            
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
+                print("User Logged In")
+                self.performSegue(withIdentifier: "redirectAfterFacebookLogin", sender: self)
                 // Do work
             }
         }
@@ -80,43 +89,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
     }
-    
-    func returnUserData()
-    {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name"])
-            graphRequest.start(completionHandler: { (connection, result, error) in
-            
-            if error != nil
-            {
-                // Process error
-                print("Error: \(error)")
-            }
-            else
-            {
-                print("fetched user: \(result)")
-//                let userName : NSString = result.value(forKey: "name") as! NSString
-//                print("User Name is: \(userName)")
-//                let userEmail : NSString = result.value(forKey: "email") as! NSString
-//                print("User Email is: \(userEmail)")
-            }
-        })
-    }
 
-    
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        switch UIDevice.current.orientation{
-        case .portrait:
-            fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 150)
-        case .portraitUpsideDown:
-            fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 150)
-        case .landscapeLeft:
-            fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 50)
-        case .landscapeRight:
-            fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 50)
-        default:
-            fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 150)
-        }
-    }
 
 }
 
