@@ -126,6 +126,7 @@
 				TargetAttributes = {
 					215B4C471E4E8C7E0063BAC6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 94ABH9GYDZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -290,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94ABH9GYDZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -306,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94ABH9GYDZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",

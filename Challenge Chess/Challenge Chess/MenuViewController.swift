@@ -11,8 +11,10 @@ import UIKit
 class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     let levels = [1,2,3,4,5]
+    var selectedLevel = 1
     @IBOutlet weak var levelView: UIView!
     @IBOutlet weak var levelPicker: UIPickerView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +22,18 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         levelView.isHidden = true;
         levelPicker.isHidden = true;
         
+        levelView.layer.cornerRadius = 10
+        
         levelPicker.delegate = self
         levelPicker.dataSource = self
+    }
+    
+    @IBAction func endLevelSelectionClicked(_ sender: Any) {
+        
+        selectedLevel = levels[levelPicker.selectedRow(inComponent: 0)]
+        levelView.isHidden = true
+        levelPicker.isHidden = true 
+        
     }
     
     @IBAction func versusButtonClicked(_ sender: Any) {
