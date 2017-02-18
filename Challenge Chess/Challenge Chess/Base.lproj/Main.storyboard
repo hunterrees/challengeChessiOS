@@ -141,6 +141,7 @@
                                 </state>
                                 <connections>
                                     <action selector="optionsButtonClicked:" destination="Jn3-Wc-Hro" eventType="touchUpInside" id="1oQ-hw-o0a"/>
+                                    <segue destination="Fzy-FZ-3rk" kind="show" id="c1B-eE-4UA"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJo-q1-X77">
@@ -167,6 +168,7 @@
                                         </state>
                                         <connections>
                                             <action selector="endLevelSelectionClicked:" destination="Jn3-Wc-Hro" eventType="touchUpInside" id="ydG-6n-odo"/>
+                                            <segue destination="p1D-VK-u05" kind="show" id="Dyn-gQ-p3X"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -183,6 +185,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djr-7s-DH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="733.60000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="WOb-7x-YYw">
+            <objects>
+                <viewController id="Fzy-FZ-3rk" customClass="OptionsViewController" customModule="Challenge_Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e44-d7-xRO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ogm-3k-Txx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="arn-Bk-90E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-M7-twV">
+                                <rect key="frame" x="107" y="66" width="161" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61893403530000002" green="0.044513188299999999" blue="0.01181290485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZg-AG-vex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="832"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="vTC-vK-4UW">
+            <objects>
+                <viewController id="p1D-VK-u05" customClass="GameViewController" customModule="Challenge_Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C9J-Qg-Wo2"/>
+                        <viewControllerLayoutGuide type="bottom" id="wAs-mV-5Aa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cTV-Et-4a5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAj-lK-Pnq">
+                                <rect key="frame" x="107" y="76" width="161" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61893403530000002" green="0.044513188299999999" blue="0.01181290485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cd1-Zn-fng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

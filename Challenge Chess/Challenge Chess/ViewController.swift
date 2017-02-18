@@ -33,14 +33,14 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if (FBSDKAccessToken.current() != nil)
-        {
-            self.performSegue(withIdentifier: "redirectAfterFacebookLogin", sender: self)
-            print("User Logged In")
-            
-        }
-        else
-        {
+//        if (FBSDKAccessToken.current() != nil)
+//        {
+//            //self.performSegue(withIdentifier: "redirectAfterFacebookLogin", sender: self)
+//            print("User Logged In")
+//            
+//        }
+//        else
+//        {
             let fbLoginButton : FBSDKLoginButton = FBSDKLoginButton()
             
             fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 150)
@@ -50,7 +50,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             fbLoginButton.delegate = self
             
             self.view.addSubview(fbLoginButton)
-        }
+//        }
         
     }
 
